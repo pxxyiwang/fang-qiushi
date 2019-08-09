@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 关注 */
+.common-list.data-v-58250ffe {
+		padding: 20rpx;
+}
+.common-list-left.data-v-58250ffe {
+		-webkit-flex-shrink: 0;
+		    -ms-flex-negative: 0;
+		        flex-shrink: 0;
+}
+.common-list-left image.data-v-58250ffe {
+		width: 90rpx;
+		height: 90rpx;
+		border-radius: 100%;
+}
+.common-list-right.data-v-58250ffe {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		margin-left: 15rpx;
+		border-bottom: 1rpx solid #eee;
+		padding-bottom: 10rpx;
+}
+.common-list-right>view:nth-child(1)>view.data-v-58250ffe:first-child {
+		color: #999;
+		font-size: 32rpx;
+}
+.common-list-right>view:nth-child(1)>view.data-v-58250ffe:last-child {
+		background: #eee;
+		padding: 0 10rpx;
+		font-size: 26rpx;
+}
+.common-list-right>view.data-v-58250ffe:nth-child(2) {
+		font-size: 32rpx;
+		padding: 12rpx 0;
+}
+.common-list-right>view.data-v-58250ffe:nth-child(3) {
+		position: relative;
+		margin-bottom: 10rpx;
+}
+.common-list-play.data-v-58250ffe, .common-list-playinfo.data-v-58250ffe {
+		position: absolute;
+		color: #fff;
+}
+.common-list-play.data-v-58250ffe {
+		font-size: 130rpx;
+}
+
+.common-list-playinfo.data-v-58250ffe {
+		right: 10rpx;
+		bottom: 10rpx;
+		background: rgba(51, 51, 51, .53);
+		border-radius: 20rpx;
+		padding: 0 20rpx;
+}
+.common-list-right>view:nth-child(3)>image.data-v-58250ffe {
+		width: 100%;
+		border-radius: 10rpx;
+}
+.common-list-right>view:nth-child(4)>view.data-v-58250ffe {
+		color: #aaa;
+}
+.common-list-right>view:nth-child(4)>view:nth-child(2)>view.data-v-58250ffe {
+		margin-left: 10rpx;
+		padding-left: 5rpx;
+		font-size: 28rpx;
+}
+/* 分享 */
+.common-list-share.data-v-58250ffe {
+		background: #eee;
+		width: 100%;
+		border-radius: 10rpx;
+		padding: 10rpx;
+}
+.common-list-share>image.data-v-58250ffe {
+		width: 200rpx;
+		height: 150rpx;
+		margin-right: 10rpx;
+}
+

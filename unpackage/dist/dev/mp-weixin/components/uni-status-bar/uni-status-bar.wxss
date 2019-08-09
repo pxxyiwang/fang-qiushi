@@ -1,0 +1,22 @@
+
+.uni-status-bar {
+	display: block;
+	width: 100%;
+	height: 20px;
+	height: 25px;
+}
+
+/* 微信小程序uni-status-bar占位问题 */
+
+
+view.uni-status-bar {
+		height: 0;
+}
+.uni-status-bar {
+		display: block;
+		width: 100%;
+		height: 0;
+}
+
+
+

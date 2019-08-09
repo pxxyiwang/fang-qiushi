@@ -1,0 +1,12 @@
+
+.uni-comment-list-child.data-v-191dbd96 {
+	background: #F4F4F4;
+	padding: 20rpx;
+ /* 超出部分不会向外扩张，而是会向里面挤 */
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	margin-left: 70rpx;
+	width: auto;
+}
+

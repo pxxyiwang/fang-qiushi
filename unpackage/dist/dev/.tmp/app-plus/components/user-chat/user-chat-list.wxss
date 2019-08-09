@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  朋友 */
+.user-chat-list.data-v-1e52bdaa {
+		padding: 20rpx 0;
+}
+.user-chat-list>image.data-v-1e52bdaa{
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 100%;
+		-webkit-flex-shrink: 0;
+		    -ms-flex-negative: 0;
+		        flex-shrink: 0;
+}
+.user-chat-list-body.data-v-1e52bdaa {
+	 position: relative;
+	 background: #f4f4f4;
+	 padding: 25rpx;
+	 margin-left: 20rpx;
+	 border-radius: 20rpx;
+	 margin-right: 100rpx;
+}
+.user-chat-list-body.data-v-1e52bdaa:after {
+	 position: absolute;
+	 left: -30rpx;
+	 right: 0;
+	 top: 30rpx;
+	 content: '';
+	 width: 0;
+	 height: 0;
+	 border: 16rpx solid #f4f4f4;
+	 border-color: transparent #f4f4f4 transparent transparent;
+}
+.user-chat-list-body>image.data-v-1e52bdaa {
+	 max-width: 150rpx;
+	 max-height: 200rpx;
+}
+	/* 自己 */
+.user-chat-me.data-v-1e52bdaa {
+	 -webkit-box-pack: end;
+	 -webkit-justify-content: flex-end;
+	     -ms-flex-pack: end;
+	         justify-content: flex-end;
+}
+.user-chat-me .user-chat-list-body.data-v-1e52bdaa {
+	 margin-left: 100rpx;
+	 margin-right: 20rpx;
+}
+.user-chat-me .user-chat-list-body.data-v-1e52bdaa:after {
+	 left: auto;
+	 right: -30rpx;
+	 border-color: transparent transparent transparent #f4f4f4;
+}
+

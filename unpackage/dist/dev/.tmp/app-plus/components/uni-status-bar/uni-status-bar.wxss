@@ -1,0 +1,12 @@
+
+.uni-status-bar {
+	display: block;
+	width: 100%;
+	height: 20px;
+	height: var(--status-bar-height);
+}
+
+/* 微信小程序uni-status-bar占位问题 */
+
+
+

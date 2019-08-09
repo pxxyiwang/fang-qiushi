@@ -1,0 +1,23 @@
+
+.title.data-v-b8058324 {
+	height: 100%;
+	margin-left: -25rpx;
+}
+.uni-textarea.data-v-b8058324 {
+	color: 1rpx solid #eee;
+}
+/* 公告 */
+.gonggao.data-v-b8058324 {
+	width: 500rpx;
+}
+.gonggao image.data-v-b8058324 {
+	width: 75%;
+	margin-bottom: 20rpx;
+}
+.gonggao button.data-v-b8058324 {
+	background: #ffe934;
+	color: #fff;
+	margin-top: 20rpx;
+}
+
+

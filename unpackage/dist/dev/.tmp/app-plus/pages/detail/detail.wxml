@@ -1,0 +1,1 @@
+<view class="data-v-385e8d90"><detail-info vue-id="1" item="{{detail}}" class="data-v-385e8d90" bind:__l="__l"></detail-info><view class="u-comment-title data-v-385e8d90">最新评论 1</view><view class="uni-comment u-comment data-v-385e8d90"><comment-list vue-id="2" comment="{{comment}}" class="data-v-385e8d90" bind:__l="__l"></comment-list></view></view>

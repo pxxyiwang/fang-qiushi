@@ -1,0 +1,1 @@
+<view><view>{{name}}</view><view data-event-opts="{{[['tap',[['clickenent']]]]}}" class="box-2" bindtap="__e">按钮</view><view data-event-opts="{{[['tap',[['boxb']]]]}}" class="box-b" bindtap="__e">外面<view data-event-opts="{{[['tap',[['boxo']]]]}}" class="box-o" catchtap="__e">里面</view></view></view>

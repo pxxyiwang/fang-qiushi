@@ -1,0 +1,21 @@
+
+.cell-pd.data-v-01f7d845 {
+	padding: 22rpx 30rpx;
+}
+.list-pd.data-v-01f7d845 {
+	margin-top: 50rpx;
+}
+.uni-uploader__file.data-v-01f7d845 {
+	position: relative;
+}
+.icon-shanchu.data-v-01f7d845 {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #000000;
+	color: #FFFFFF;
+	padding: 2rpx 10rpx;
+	border-radius: 10rpx;
+	
+}
+
