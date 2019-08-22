@@ -16,7 +16,6 @@
 		methods: {
 			// 发送
 			submit () {
-				console.log(this.text);
 				this.$emit('submit', this.text);
 				this.text = '';
 			}

@@ -9,4 +9,8 @@
 	margin-left: 70rpx;
 	width: auto;
 }
+.uni-comment-date.data-v-191dbd96 {
+	/* font-size: 5rpx; */
+	color: #999;
+}
 

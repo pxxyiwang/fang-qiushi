@@ -1,0 +1,17 @@
+
+.user-space-data.data-v-1aa511fc {
+	padding: 0 30rpx;
+}
+.user-space-data-item.data-v-1aa511fc {
+	padding: 20rpx 0;
+	border-bottom: 1rpx solid #eee;
+}
+.user-space-data-item>view.data-v-1aa511fc {
+	color: #aaa;
+}
+.user-space-data-item>view.data-v-1aa511fc:first-child {
+	color: #333;
+	font-size: 35rpx;
+	padding: 15rpx 0;
+}
+

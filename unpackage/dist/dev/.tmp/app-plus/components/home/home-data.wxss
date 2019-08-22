@@ -1,0 +1,19 @@
+
+.home-data.data-v-662f9e0d {
+	padding: 20rpx 40rpx;
+}
+.home-data>view.data-v-662f9e0d {
+	color: #989898;
+}
+.home-data>view>view.data-v-662f9e0d {
+	font-size: 32rpx;
+	color: #333;
+}
+.home-adv.data-v-662f9e0d {
+	padding: 20rpx;
+}
+.home-adv>image.data-v-662f9e0d {
+	border-radius: 20%;
+	height: 150rpx;
+}
+

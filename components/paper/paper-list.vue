@@ -30,7 +30,7 @@
 		methods: {
 			// 点击好友跳转聊天页面
 			openDetail () {
-				uni.navigateTo({
+				this.user.navigate({
 					url: '../../pages/user-chat/user-chat'
 				})
 			}

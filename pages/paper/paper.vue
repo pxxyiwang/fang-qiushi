@@ -110,7 +110,7 @@
 			switch(e.index) {
 				case 0:
 					
-					uni.navigateTo({
+					this.user.navigate({
 						url: '../user-list/user-list'
 					})
 					this.hidepopup();

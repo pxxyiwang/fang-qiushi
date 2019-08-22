@@ -1,1 +1,2 @@
+setCssToHead([".",[1],"home-list.",[1],"data-v-7a429a50 { padding: ",[0,20],"; }\n",],undefined,{path:"./pages/home/home.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/home/home.wxml') } }));

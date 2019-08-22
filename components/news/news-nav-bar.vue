@@ -44,7 +44,7 @@
 			},
 			// 跳转发布
 			openAdd () {
-				uni.navigateTo({
+				this.user.navigate({
 					url: '../add-input/add-input'
 				});
 			}

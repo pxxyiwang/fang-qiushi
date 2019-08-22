@@ -39,14 +39,15 @@
 		},
 		// 页面加载
 		onLoad() {
-			this.getData();
-			this.initdata();
+			
 		},
 		// 页面渲染
 		onReady() {
 			// 页面只会渲染一次，所以必须还要在每次发送信息的时候在调用一次
 			this.$nextTick(() => {
-				this.pageToBottom();
+				this.getData();
+				this.initdata();
+				this.pageToBottom(true);
 			})
 		},
 		created() {
@@ -68,21 +69,32 @@
 				} catch (e) {}
 			},
 			// 计算每一条信息框的高度，判断是否需要滚动（由于操作的是dom，所以必须要在页面渲染完后加载该方法）
-			pageToBottom () {
+			pageToBottom (isfirst = false) {
 				// uni.createSelectorQuery()能拿到dom节点
-				let q = uni.createSelectorQuery();
+				let q = uni.createSelectorQuery().in(this);
 				// 拿到每一条信息框的节点 (注：目前uni-app文档中，app、微信小程序暂时拿不到自定义子组件里面的dom元素+——2019.8.9)
-				q.select('#scrollview').boundingClientRect();
-				q.selectAll('.user-chat-item').boundingClientRect().exec((res) => {
-					console.log(res);
-					res[1].forEach((ret) => {
-						this.style.itemH += ret.height;
-					});
-				});
-								
-				if (this.style.itemH > this.style.contentH) {
-					this.scrollTop = this.style.itemH;
-				}
+				let itemH = q.selectAll('.user-chat-item');
+				
+				this.$nextTick(() => {
+					itemH.fields({
+						size: true
+					}, data => {
+						if (data) {
+							if (isfirst) {
+								for (let i = 0; i < data.length; i++) {
+									this.style.itemH += data[i].height;
+								}
+							}else {
+								this.style.itemH += data[data.length-1].height;
+							}
+							if (this.style.itemH > this.style.contentH) {
+								this.scrollTop = this.style.itemH;
+							}
+						}
+						
+					}).exec();
+				})
+
 				
 			},
 			// 发送
@@ -110,6 +122,62 @@
 			getData () {
 				// 从后端获取数据
 				let arr = [
+						{
+							isme: false, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/11.jpg',
+							type: 'text', // 是视屏/图片/文字
+							data: '哈哈哈', // 内容
+							time: '1554980014' // 时间戳
+						},
+						{
+							isme: true, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/10.jpg',
+							type: 'img', // 是视屏/图片/文字
+							data: '../../static/demo/2.jpg', // 内容
+							time: '1554980214' // 时间戳
+						},
+						{
+							isme: false, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/11.jpg',
+							type: 'text', // 是视屏/图片/文字
+							data: '哈哈哈', // 内容
+							time: '1554980014' // 时间戳
+						},
+						{
+							isme: true, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/10.jpg',
+							type: 'img', // 是视屏/图片/文字
+							data: '../../static/demo/2.jpg', // 内容
+							time: '1554980214' // 时间戳
+						},
+						{
+							isme: false, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/11.jpg',
+							type: 'text', // 是视屏/图片/文字
+							data: '哈哈哈', // 内容
+							time: '1554980014' // 时间戳
+						},
+						{
+							isme: true, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/10.jpg',
+							type: 'img', // 是视屏/图片/文字
+							data: '../../static/demo/2.jpg', // 内容
+							time: '1554980214' // 时间戳
+						},
+						{
+							isme: false, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/11.jpg',
+							type: 'text', // 是视屏/图片/文字
+							data: '哈哈哈', // 内容
+							time: '1554980014' // 时间戳
+						},
+						{
+							isme: true, // 信息发送人人是不是自己
+							userpic: '../../static/demo/userpic/10.jpg',
+							type: 'img', // 是视屏/图片/文字
+							data: '../../static/demo/2.jpg', // 内容
+							time: '1554980214' // 时间戳
+						},
 						{
 							isme: false, // 信息发送人人是不是自己
 							userpic: '../../static/demo/userpic/11.jpg',

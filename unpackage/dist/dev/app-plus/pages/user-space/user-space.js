@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"user-space-margin.",[1],"data-v-20a8c7b0 { margin: ",[0,15],"; }\n.",[1],"user-space-data.",[1],"data-v-20a8c7b0 { background: #fff; position: relative; border-top-left-radius: ",[0,20],"; border-top-right-radius: ",[0,20],"; margin-top: ",[0,-15],"; z-index: 10; }\n",],undefined,{path:"./pages/user-space/user-space.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user-space/user-space.wxml') } }));

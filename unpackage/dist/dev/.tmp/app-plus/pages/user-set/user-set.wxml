@@ -1,0 +1,1 @@
+<view class="body data-v-32e5fa70"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block class="data-v-32e5fa70"><home-list-item vue-id="{{'1-'+index}}" item="{{item}}" index="{{index}}" class="data-v-32e5fa70" bind:__l="__l"></home-list-item></block></block><button class="user-set-btn data-v-32e5fa70" type="primary">退出登陆</button></view>

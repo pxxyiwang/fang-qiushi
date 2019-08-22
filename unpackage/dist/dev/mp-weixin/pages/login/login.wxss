@@ -1,0 +1,87 @@
+.body.data-v-03f3e744 {
+	padding: 0 20rpx;
+}
+/* 按钮 */
+.user-set-btn.data-v-03f3e744 {
+	width: 100%;
+	padding: 20rpx 0;
+	background: #ffe933!important;
+	color: #333!important;
+	margin-top: 20rpx;
+}
+.user-set-btn-disable.data-v-03f3e744 {
+	background: #f4f4f4!important;
+	border: 1rpx solid #eee;
+	color: #909090!important;
+}
+.common-input.data-v-03f3e744 {
+	font-size: 30rpx;
+	border-bottom: 1rpx solid #f4f4f4;
+}
+.login-padding.data-v-03f3e744 {
+	padding: 20rpx 0;
+}
+.login-font-color.data-v-03f3e744 {
+	color: #bbb;
+}
+.icon-guanbi.data-v-03f3e744 {
+	position: fixed;
+	top: 60rpx;
+	left: 30rpx;
+	font-size: 40rpx;
+	font-weight: bold;
+	color: #332f0a;
+}
+
+.loginHead.data-v-03f3e744 {
+	width: 100%;
+}
+.other-login-title.data-v-03f3e744 {
+	position: relative;
+}
+.other-login-title.data-v-03f3e744:before, .other-login-title.data-v-03f3e744:after {
+	position: absolute;
+	background: #bbb;
+	height: 1rpx;
+	width: 100rpx;
+	top: 50%;
+	content: "";
+}
+.other-login-title.data-v-03f3e744:before {
+	left: 25%;
+}
+.other-login-title.data-v-03f3e744:after {
+	right: 25%;
+}
+.login-inout-box.data-v-03f3e744 {
+	position: relative;
+}
+.login-inout-box .forget-input.data-v-03f3e744 {
+	padding-right: 160rpx;
+}
+.login-inout-box .forget.data-v-03f3e744, .login-inout-box .phone.data-v-03f3e744 {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+.login-inout-box .forget.data-v-03f3e744 {
+	width: 160rpx;
+	right: 0;
+}
+.login-inout-box .phone-input.data-v-03f3e744 {
+	padding-left: 100rpx;
+}
+.login-inout-box .phone.data-v-03f3e744 {
+	width: 100rpx;
+	font-weight: bold;
+	left:0;
+}
+.yanzhengma view.data-v-03f3e744 {
+	background: #eee;
+	border-radius: 15rpx;
+	font-size: 25rpx;
+	padding: 0 5rpx;
+	width: 160rpx;
+	padding: 8rpx 0;
+}
+

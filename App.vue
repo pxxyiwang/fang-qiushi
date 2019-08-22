@@ -2,6 +2,7 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			// console.log(this.config.webUrl)
 		},
 		onShow: function() {
 			console.log('App Show')

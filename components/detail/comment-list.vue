@@ -7,10 +7,10 @@
 					<view class="uni-comment-top">
 						<text>{{ item.username }}</text>
 					</view>
+					<view class="uni-comment-content">{{ item.data }}</view>
 					<view class="uni-comment-date">
 						<text>{{ item.time }}</text>
 					</view>
-					<view class="uni-comment-content">{{ item.data }}</view>
 				</view>
 			</view>
 		</block>
@@ -34,5 +34,9 @@
 		margin: 0;
 		margin-left: 70rpx;
 		width: auto;
+	}
+	.uni-comment-date {
+		/* font-size: 5rpx; */
+		color: #999;
 	}
 </style>

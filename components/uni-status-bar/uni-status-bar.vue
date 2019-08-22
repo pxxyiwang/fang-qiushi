@@ -1,5 +1,5 @@
 <template>
-	<view :style="{ height: statusBarHeight }" class="uni-status-bar">
+	<view :style="{ height: statusBarHeight, background: bgcolor }" class="uni-status-bar">
 		<slot />
 	</view>
 </template>
@@ -11,6 +11,12 @@
 	// #endif
 	export default {
 		name: 'UniStatusBar',
+		props: {
+			bgcolor: {
+				type: String,
+				default: ''
+			}
+		},
 		data() {
 			return {
 				statusBarHeight: statusBarHeight
