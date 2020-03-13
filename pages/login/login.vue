@@ -92,6 +92,34 @@
 			}
 		},
 		methods: {
+			// 判断用户是否登录
+			isLogin(){
+				if (!this.User.token){
+					this.loginStatus = false;
+					this.homeinfo={
+						userpic:"",
+						username:"",
+						totalnum:0,
+						todaynum:0,
+					};
+					this.homedata[0].num = 0;
+					this.homedata[1].num = 0;
+					this.homedata[2].num = 0;
+					this.homedata[3].num = 0;
+					return;
+				}
+				// 用户已登录
+				this.homeinfo.id = this.User.userinfo.id;
+				this.homeinfo.userpic = this.User.userinfo.userpic;
+				this.homeinfo.username = this.User.userinfo.username;
+				this.homeinfo.totalnum = this.User.counts.post_count || 0;
+				this.homeinfo.todaynum = this.User.counts.today_posts_count || 0;
+				this.homedata[0].num = this.User.counts.post_count || 0;
+				this.homedata[1].num = this.User.counts.post_count || 0;
+				this.homedata[2].num = this.User.counts.comments_count || 0;
+				this.homedata[3].num = this.User.counts.withfen_count || 0;
+				this.loginStatus = true;
+			},
 			// 返回上一步
 			back () {
 				uni.navigateBack({
@@ -107,6 +135,7 @@
 			},
 			// 切换登录状态
 			changeStatus () {
+				// console.log(4444);
 				this.initInput();
 				this.status = !this.status;
 				console.log(status)
@@ -159,7 +188,13 @@
 			submit () {
 				// 账号密码登录
 				if (!this.status) {
-					return;
+					return this.user.login({
+						url: "/user/login",
+						data: {
+							username: this.userName,
+							password: this.password
+						}
+					});
 				}
 				// 验证码登录
 				// 验证手机登录

@@ -64,7 +64,6 @@
 								icon: icon
 							}
 						});
-						console.log(this.providerList);
 					},
 					fail: (error) => {
 						console.log('获取登录通道失败', error);

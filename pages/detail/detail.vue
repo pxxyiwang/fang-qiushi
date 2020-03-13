@@ -15,7 +15,7 @@
 		<user-chat-bottom @submit="submit"></user-chat-bottom>
 		
 		<!-- 分享 -->
-		<more-share :shareshow="shareshow" @togle="togle"></more-share>
+		<more-share :shareshow="shareshow" @togle="togle" :sharedata="sharedata"></more-share>
 				
 	</view>
 </template>

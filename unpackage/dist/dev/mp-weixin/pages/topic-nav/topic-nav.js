@@ -105,7 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 180));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var topicList = function topicList() {return __webpack_require__.e(/*! import() | components/news/topic-list */ "components/news/topic-list").then(__webpack_require__.bind(null, /*! ../../components/news/topic-list.vue */ 222));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 180));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var topicList = function topicList() {return __webpack_require__.e(/*! import() | components/news/topic-list */ "components/news/topic-list").then(__webpack_require__.bind(null, /*! ../../components/news/topic-list.vue */ 222));};var _default =
+
+
+
+
+
 
 
 
@@ -164,166 +169,7 @@ __webpack_require__.r(__webpack_exports__);
       { name: "财经", id: "5" },
       { name: "新闻", id: "6" }],
 
-      newList: [
-      {
-        loadtext: '上拉加载',
-        list: [
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        }] },
-
-
-      {
-        loadtext: '上拉加载',
-        list: [
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        }] },
-
-
-
-      {
-        loadtext: '上拉加载',
-        list: [] },
-
-      {
-        loadtext: '上拉加载',
-        list: [
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        }] },
-
-
-      {
-        loadtext: '上拉加载',
-        list: [] },
-
-      {
-        loadtext: '上拉加载',
-        list: [] },
-
-      {
-        loadtext: '上拉加载',
-        list: [] }] };
-
-
+      newList: [] };
 
   },
   onLoad: function onLoad() {var _this = this;
@@ -333,11 +179,67 @@ __webpack_require__.r(__webpack_exports__);
         _this.swiperHeight = height;
       } });
 
+    this.getNav();
   },
   methods: {
+    // 获取所有话题分类
+    getNav: function () {var _getNav = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, _ref2, err, res, list, arr, arrChild, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  this.$http.get('/topicclass'));case 2:_ref = _context.sent;_ref2 = _slicedToArray(_ref, 2);err = _ref2[0];res = _ref2[1];if (
+                this.$http.errorCheck(err, res)) {_context.next = 8;break;}return _context.abrupt("return");case 8:
+                list = res.data.data.list;
+                arr = [];
+                arrChild = [];
+                for (i = 0; i < list.length; i++) {
+                  arr.push({
+                    id: list[i].id,
+                    name: list[i].classname });
+
+                  arrChild.push({
+                    loadtext: "上拉加载更多",
+                    list: [],
+                    page: 1,
+                    firstload: false // 是第一次加载?
+                  });
+                }
+                this.tabBars = arr;
+                this.newList = arrChild;
+                this.tabBars.length > 0 && this.getList();case 15:case "end":return _context.stop();}}}, _callee, this);}));function getNav() {return _getNav.apply(this, arguments);}return getNav;}(),
+
+    // 获取指定列表
+    getList: function () {var _getList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this2 = this;var currentIndex, url, _ref3, _ref4, err, res, error, arr, list, i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+                currentIndex = this.tabIndex;
+                url = "/topicclass/".concat(this.tabBars[this.tabIndex].id, "/topic/").concat(this.newList[this.tabIndex].page);_context2.next = 4;return (
+                  this.$http.get(url));case 4:_ref3 = _context2.sent;_ref4 = _slicedToArray(_ref3, 2);err = _ref4[0];res = _ref4[1];
+                error = this.$http.errorCheck(err, res, function () {
+                  _this2.newList[currentIndex].loadtext = "上拉加载更多";
+                }, function () {
+                  _this2.newList[currentIndex].loadtext = "上拉加载更多";
+                });if (
+                error) {_context2.next = 11;break;}return _context2.abrupt("return");case 11:
+                arr = [];
+                list = res.data.data.list;
+                for (i = 0; i < list.length; i++) {
+                  arr.push({
+                    id: list[i].id,
+                    title: list[i].title,
+                    titlepic: list[i].titlepic,
+                    type: list[i].type,
+                    totalnum: list[i].post_count,
+                    todaynum: list[i].todaypost_count });
+
+                }
+                this.newList[currentIndex].list = this.newList[currentIndex].page > 1 ? this.newList[currentIndex].list.concat(arr) : arr;
+                this.newList[currentIndex].firstload = true;
+                if (list.length < 10) {
+                  this.newList[currentIndex].loadtext = "没有更多数据了";
+                } else {
+                  this.newList[currentIndex].loadtext = "上拉加载更多";
+                }return _context2.abrupt("return");case 18:case "end":return _context2.stop();}}}, _callee2, this);}));function getList() {return _getList.apply(this, arguments);}return getList;}(),
+
+
     // 上拉加载
-    loadmore: function loadmore(index) {var _this2 = this;
-      if (this.newList[index].loadtext != "上拉加载") {return;}
+    loadmore: function loadmore(index) {var _this3 = this;
+      if (this.newList[index].loadtext != "上拉加载更多") {return;}
       this.newList[index].loadtext = "加载中。。。";
 
       setTimeout(function () {
@@ -348,14 +250,15 @@ __webpack_require__.r(__webpack_exports__);
           totalnum: 20, // 动态
           todaynum: 5 // 今日话题量
         };
-        _this2.newList[index].list.push(data);
-        _this2.newList[index].loadtext = "上拉加载";
+        _this3.newList[index].list.push(data);
+        _this3.newList[index].loadtext = "上拉加载更多";
       }, 1000);
       // this.newList[index].loadtext = "没有更多数据了";
     },
     // 滑动事件
     tabChange: function tabChange(e) {
       this.tabIndex = e.detail.current;
+      this.getList();
     },
     // tabber点击事件
     tabtap: function tabtap(index) {

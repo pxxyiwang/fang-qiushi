@@ -19,7 +19,6 @@
 							<view class="u-f-ajc" style="font-size: 50rpx, font-weight: bold; color: #ccc; padding-top: 100rpx;">
 								Loading ...
 							</view>
-							<no-thing></no-thing>
 						</template>
 						<template v-else>
 							<!--  无内容 -->
@@ -45,38 +44,8 @@
 			return {
 				swiperHeight: 0,
 				tabIndex: 0,
-				tabBars: [
-					// {name: "关注", id: "1"},
-					// {name: "推荐", id: "2"},
-					// {name: "体育", id: "3"},
-					// {name: "热点", id: "4"},
-					// {name: "财经", id: "5"},
-					// {name: "新闻", id: "6"}
-				],
-				newList: [
-					
-					/* {
-						loadtext: '上拉加载',
-						list: [
-							{
-								userpic: "../../static/demo/userpic/12.jpg", // 用户头像
-								username: "昵称", // 用户昵称
-								isguanzhu: false, // 是否关注
-								title: "我是标题", // 标题
-								type: "img", // img: 图文， video: 视频
-								titlepic: "../../static/demo/datapic/11.jpg", // 标题图片
-								playnum: "20w", // 播放次数
-								long: "2:47", // 视频时长
-								infonum: {  // 点赞
-									index: 0, // 0：没有操作  1：点赞 2： 踩
-									dingnum: 11, // 点赞数量
-									cainum: 11,  // 踩
-								}, 
-								commentnum: 0, // 评论
-								sharenum: 11, // 转发（分享）
-							}
-				, */
-				]
+				tabBars: [],
+				newList: [],
 			}
 		},
 		components: {
@@ -186,7 +155,7 @@
 			},
 			// 上拉加载
 			loadmore (index) {
-				if (this.newList[index].loadtext != "上拉加载") {return ;}
+				if (this.newList[index].loadtext != "上拉加载更多") {return ;}
 				this.newList[index].loadtext = "加载中。。。";
 				
 				this.newList[this.tabIndex].page++;

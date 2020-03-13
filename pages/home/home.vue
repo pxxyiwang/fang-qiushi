@@ -79,6 +79,10 @@
 				})
 			}
 		},
+		onShow() {
+			console.log(this.user.token);
+			console.log(this.user.userinfo);
+		},
 		methods: {
 			// 登陆
 			openLogin () {

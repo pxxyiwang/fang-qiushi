@@ -103,7 +103,12 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var topicInfo = function topicInfo() {return __webpack_require__.e(/*! import() | components/topic/topic-info */ "components/topic/topic-info").then(__webpack_require__.bind(null, /*! ../../components/topic/topic-info.vue */ 292));};var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 180));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/common-list */ "components/common/common-list").then(__webpack_require__.bind(null, /*! ../../components/common/common-list.vue */ 208));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var topicInfo = function topicInfo() {return __webpack_require__.e(/*! import() | components/topic/topic-info */ "components/topic/topic-info").then(__webpack_require__.bind(null, /*! ../../components/topic/topic-info.vue */ 292));};var swiperTabHead = function swiperTabHead() {return __webpack_require__.e(/*! import() | components/index/swiper-tab-head */ "components/index/swiper-tab-head").then(__webpack_require__.bind(null, /*! ../../components/index/swiper-tab-head.vue */ 180));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/common-list */ "components/common/common-list").then(__webpack_require__.bind(null, /*! ../../components/common/common-list.vue */ 208));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var _default =
+
+
+
+
+
 
 
 
@@ -153,6 +158,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       topicInfo: {
+        id: '',
         titlepic: '../../static/demo/topicpic/13.jpeg',
         title: '忆往事，敬余生',
         desc: '我是描述',
@@ -166,208 +172,16 @@ __webpack_require__.r(__webpack_exports__);
 
       tabList: [
       {
-        loadtext: '上拉加载',
-        list: [
-
-        // 图文
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-          video: false, // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        // 视屏
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 0, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-          video: {
-            looknum: '20w',
-            long: '2:20' },
-          // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-          video: {
-            looknum: '50w',
-            long: '2:20' },
-          // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        // 分享
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '', // 主题 图片
-          video: false, // 主题 视屏
-          share: {
-            title: '远处只适合遥望......',
-            titlepic: '../../static/demo/datapic/1.jpg' },
-          // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 0, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '', // 主题 图片
-          video: false, // 主题 视屏
-          share: {
-            title: '远处只适合遥望......',
-            titlepic: '../../static/demo/datapic/1.jpg' },
-          // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        }] },
-
-
-
+        loadtext: '上拉加载更多',
+        list: [],
+        firstload: false,
+        page: 1 },
 
       {
-        loadtext: '上拉加载',
-        list: [
-
-        // 图文
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-          video: false, // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        // 视屏
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 0, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-          video: {
-            looknum: '20w',
-            long: '2:20' },
-          // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-          video: {
-            looknum: '50w',
-            long: '2:20' },
-          // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        // 分享
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '', // 主题 图片
-          video: false, // 主题 视屏
-          share: {
-            title: '远处只适合遥望......',
-            titlepic: '../../static/demo/datapic/1.jpg' },
-          // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        },
-
-        {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 0, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '', // 主题 图片
-          video: false, // 主题 视屏
-          share: {
-            title: '远处只适合遥望......',
-            titlepic: '../../static/demo/datapic/1.jpg' },
-          // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        }] }] };
-
-
-
+        loadtext: '上拉加载更多',
+        list: [],
+        firstload: false,
+        page: 1 }] };
 
 
 
@@ -381,40 +195,81 @@ __webpack_require__.r(__webpack_exports__);
   onPullDownRefresh: function onPullDownRefresh() {
     this.getDownRefresh();
   },
+  onLoad: function onLoad(e) {
+    this.__init(JSON.parse(e.detail));
+    // this.__init(e.detail);
+  },
   methods: {
+    // 初始化
+    __init: function __init(obj) {
+      // 修改标题
+      uni.setNavigationBarTitle({ title: obj.title });
+      // 赋值
+      this.topicInfo = obj;
+      // 获取列表数据
+      this.getList();
+    },
+    // 获取数据
+    getList: function () {var _getList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var url, _ref, _ref2, err, res, arr, list, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                url = "/topic/".concat(this.topicInfo.id, "/post/").concat(this.tabList[this.tabIndex].page);_context.next = 3;return (
+                  this.$http.get(url, {}, { token: true }));case 3:_ref = _context.sent;_ref2 = _slicedToArray(_ref, 2);err = _ref2[0];res = _ref2[1];if (
+
+                this.$http.errorCheck(err, res)) {_context.next = 9;break;}return _context.abrupt("return",
+                this.tabList[this.tabIndex].loadtext = "上拉加载更多");case 9:
+
+
+                arr = [];
+                list = res.data.data.list;
+                for (i = 0; i < list.length; i++) {
+                  arr.push(this.__format(list[i]));
+                }
+                this.tabList[this.tabIndex].list = this.tabList[this.tabIndex].page > 1 ? this.tabList[this.tabIndex].list.concat(arr) : arr;
+                this.tabList[this.tabIndex].firstload = true;return _context.abrupt("return",
+                this.tabList[this.tabIndex].loadtext = list.length < 10 ? "没有更多数据了" : "上拉加载更多");case 15:case "end":return _context.stop();}}}, _callee, this);}));function getList() {return _getList.apply(this, arguments);}return getList;}(),
+
+    // 格式转化
+    __format: function __format(item) {
+      return {
+        userid: item.user.id,
+        userpic: item.user.userpic,
+        username: item.user.username,
+        isguanzhu: !!item.user.fens.length,
+        id: item.id,
+        title: item.title,
+        type: "img", // img:图文,video:视频
+        titlepic: item.titlepic,
+        video: false,
+        path: item.path,
+        share: !!item.share,
+        infonum: {
+          index: item.support.length > 0 ? item.support[0].type + 1 : 0, //0:没有操作，1:顶,2:踩；
+          dingnum: item.ding_count,
+          cainum: item.cai_count },
+
+        goodnum: item.ding_count,
+        commentnum: item.comment_count,
+        sharenum: item.sharenum };
+
+    },
     // tabber点击事件
     tabtap: function tabtap(index) {
       this.tabIndex = index;
+      this.tabList[this.tabIndex].page = 1;
+      this.getList();
     },
     // 上拉加载
-    loadmore: function loadmore() {var _this = this;
-      if (this.tabList[this.tabIndex].loadtext != "上拉加载") {return;}
+    loadmore: function loadmore() {
+      if (this.tabList[this.tabIndex].loadtext != "上拉加载更多") {return;}
       this.tabList[this.tabIndex].loadtext = "加载中。。。";
 
-      setTimeout(function () {
-        var data = {
-          userpic: '../../static/demo/datapic/1.jpg', // 头像
-          username: '忆忘', // 昵称
-          sex: 1, // 0 男 1 女
-          age: 25, // 年龄
-          isguanzhu: false, // 是否关注
-          title: '黑夜的烟火,绚丽而短暂', // 标题
-          titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-          video: false, // 主题 视屏
-          share: false, // 主题 分享
-          path: "深圳 龙岗", // 地址
-          sharenum: 20, // 分享数量
-          commentnum: 30, // 评论数
-          goodnum: 20 // 点赞
-        };
+      // 页数++
+      this.tabList[this.tabIndex].page++;
 
-        _this.tabList[_this.tabIndex].list.push(data);
-        _this.tabList[_this.tabIndex].loadtext = "上拉加载";
-      }, 1000);
-      // this.tabList[this.tabIndex].loadtext = "没有更多数据了";
+      // 获取数据
+      this.getList();
     },
     // 下拉刷新
-    getDownRefresh: function getDownRefresh() {var _this2 = this;
+    getDownRefresh: function getDownRefresh() {var _this = this;
 
       setTimeout(function () {
         // 获取数据
@@ -479,7 +334,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
         // 赋值
-        _this2.tabList[_this2.tabIndex].list = data;
+        _this.tabList[_this.tabIndex].list = data;
         uni.stopPullDownRefresh();
       }, 2000);
     } } };exports.default = _default;

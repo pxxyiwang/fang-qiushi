@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var newNavBar = function newNavBar() {return __webpack_require__.e(/*! import() | components/news/news-nav-bar */ "components/news/news-nav-bar").then(__webpack_require__.bind(null, /*! ../../components/news/news-nav-bar.vue */ 201));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/common-list */ "components/common/common-list").then(__webpack_require__.bind(null, /*! ../../components/common/common-list.vue */ 208));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var topicNav = function topicNav() {return __webpack_require__.e(/*! import() | components/news/topic-nav */ "components/news/topic-nav").then(__webpack_require__.bind(null, /*! ../../components/news/topic-nav.vue */ 215));};var topicList = function topicList() {return __webpack_require__.e(/*! import() | components/news/topic-list */ "components/news/topic-list").then(__webpack_require__.bind(null, /*! ../../components/news/topic-list.vue */ 222));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var newNavBar = function newNavBar() {return __webpack_require__.e(/*! import() | components/news/news-nav-bar */ "components/news/news-nav-bar").then(__webpack_require__.bind(null, /*! ../../components/news/news-nav-bar.vue */ 201));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/common-list */ "components/common/common-list").then(__webpack_require__.bind(null, /*! ../../components/common/common-list.vue */ 208));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/no-thing */ "components/common/no-thing").then(__webpack_require__.bind(null, /*! ../../components/common/no-thing.vue */ 194));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/load-more */ "components/common/load-more").then(__webpack_require__.bind(null, /*! ../../components/common/load-more.vue */ 187));};var topicNav = function topicNav() {return __webpack_require__.e(/*! import() | components/news/topic-nav */ "components/news/topic-nav").then(__webpack_require__.bind(null, /*! ../../components/news/topic-nav.vue */ 215));};var topicList = function topicList() {return __webpack_require__.e(/*! import() | components/news/topic-list */ "components/news/topic-list").then(__webpack_require__.bind(null, /*! ../../components/news/topic-list.vue */ 222));};var _default =
 
 
 
@@ -294,49 +294,9 @@ __webpack_require__.r(__webpack_exports__);
 
       // 话题
       topic: {
-        swiper: [
-        { src: '../../static/demo/banner2.jpg' },
-        { src: '../../static/demo/banner2.jpg' },
-        { src: '../../static/demo/banner2.jpg' }],
-
-        nav: [
-        { name: '最新', id: 1 },
-        { name: '游戏', id: 2 },
-        { name: '打卡', id: 3 },
-        { name: '感情', id: 4 },
-        { name: '故事', id: 5 },
-        { name: '喜爱', id: 6 }],
-
-        list: [
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        },
-        {
-          titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-          title: '#话题名称#', // 话题名称
-          desc: '我是话题描述', // 描述
-          totalnum: 20, // 动态
-          todaynum: 5 // 今日话题量
-        }] } };
-
+        swiper: [],
+        nav: [],
+        list: [] } };
 
 
   },
@@ -347,8 +307,71 @@ __webpack_require__.r(__webpack_exports__);
         _this.swiperHeight = height;
       } });
 
+
+    this.__init();
+
   },
   methods: {
+    // 点击搜索
+    openSearch: function openSearch() {
+      uni.navigateTo({
+        url: '../search/search?searchType=topic' });
+
+    },
+    // 初始化数据
+    __init: function __init() {
+      this.getSwiper();
+      this.getNav();
+      this.getHot();
+    },
+    // 获取广告
+    getSwiper: function () {var _getSwiper = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, _ref2, err, res, arr, list, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  this.$http.get('/adsense/0'));case 2:_ref = _context.sent;_ref2 = _slicedToArray(_ref, 2);err = _ref2[0];res = _ref2[1];if (
+                this.$http.errorCheck(err, res)) {_context.next = 8;break;}return _context.abrupt("return");case 8:
+                arr = [];
+                list = res.data.data.list;
+                for (i = 0; i < list.length; i++) {
+                  arr.push({
+                    src: list[i].src,
+                    url: list[i].url,
+                    id: list[i].id,
+                    type: list[i].type });
+
+                }
+                this.topic.swiper = arr;case 12:case "end":return _context.stop();}}}, _callee, this);}));function getSwiper() {return _getSwiper.apply(this, arguments);}return getSwiper;}(),
+
+    // 获取热门分类
+    getNav: function () {var _getNav = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _ref3, _ref4, err, res, arr, list, i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  this.$http.get('/topicclass'));case 2:_ref3 = _context2.sent;_ref4 = _slicedToArray(_ref3, 2);err = _ref4[0];res = _ref4[1];if (
+                this.$http.errorCheck(err, res)) {_context2.next = 8;break;}return _context2.abrupt("return");case 8:
+                arr = [];
+                list = res.data.data.list;
+                for (i = 0; i < list.length; i++) {
+                  arr.push({
+                    id: list[i].id,
+                    name: list[i].classname });
+
+                }
+                this.topic.nav = arr;case 12:case "end":return _context2.stop();}}}, _callee2, this);}));function getNav() {return _getNav.apply(this, arguments);}return getNav;}(),
+
+    // 获取热门话题
+    getHot: function () {var _getHot = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _ref5, _ref6, err, res, arr, list, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+                  this.$http.get('/hottopic'));case 2:_ref5 = _context3.sent;_ref6 = _slicedToArray(_ref5, 2);err = _ref6[0];res = _ref6[1];if (
+                this.$http.errorCheck(err, res)) {_context3.next = 8;break;}return _context3.abrupt("return");case 8:
+                arr = [];
+                list = res.data.data.list;
+                for (i = 0; i < list.length; i++) {
+                  arr.push({
+                    id: list[i].id,
+                    title: list[i].title,
+                    titlepic: list[i].titlepic,
+                    type: list[i].type,
+                    totalnum: list[i].post_count,
+                    todaynum: list[i].todaypost_count });
+
+                }
+                this.topic.list = arr;case 12:case "end":return _context3.stop();}}}, _callee3, this);}));function getHot() {return _getHot.apply(this, arguments);}return getHot;}(),
+
     // 导航栏内容切换
     changeTab: function changeTab(index) {
       this.tabIndex = index;

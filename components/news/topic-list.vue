@@ -19,7 +19,7 @@
 			// 话题详情
 			openDetail () {
 				uni.navigateTo({
-					url: '../../pages/topic-detail/topic-detail'
+					url: '../../pages/topic-detail/topic-detail?detail=' + JSON.stringify(this.item)
 				}) 
 			}
 		}

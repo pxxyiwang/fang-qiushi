@@ -130,30 +130,39 @@ __webpack_require__.r(__webpack_exports__);
 var _default =
 {
   props: {
-    shareshow: Boolean },
+    shareshow: Boolean,
+    sharedata: Object },
 
   data: function data() {
     return {
-      shareText: 'uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！',
-      href: "https://uniapp.dcloud.io",
+      title: '',
+      shareText: '',
+      href: "",
       image: '',
       shareType: 1, // 1文字  2图片  0图文  5小程序  
       providerList: [] };
 
   },
+  watch: {
+    sharedata: function sharedata(newValue, oldValue) {
+      this.title = newValue.title;
+      this.shareText = newValue.content;
+      this.href = newValue.url;
+      this.image = newValue.titlepic;
+      this.shareType = newValue.shareType;
+
+    } },
+
   // mounted() {
   // 	this.onload();
   // },
   // 在H5端中，目前自定义组件中onLoad方法目前还不支持，暂时只能先用vue中的created或者mounted方法或者将使用哦那onReady()。onload目前只在vue文件的页面。
   // onLoad() {
   onReady: function onReady() {var _this = this;
-    console.log(1111);
     uni.getProvider({
       service: 'share',
       success: function success(e) {
         var data = [];
-        console.log(e);
-        console.log(222);
         for (var i = 0; i < e.provider.length; i++) {
           switch (e.provider[i]) {
             case 'weixin':
@@ -268,9 +277,9 @@ var _default =
                 2 ? 18 : _context.t0 ===
 
 
-                5 ? 20 : 24;break;case 11:shareOPtions.summary = this.shareText;shareOPtions.imageUrl = this.image;shareOPtions.title = '欢迎体验uniapp';shareOPtions.href = 'https://uniapp.dcloud.io';return _context.abrupt("break", 25);case 16:shareOPtions.summary = this.shareText;return _context.abrupt("break", 25);case 18:shareOPtions.imageUrl = this.image;return _context.abrupt("break", 25);case 20:
-                shareOPtions.imageUrl = this.image ? this.image : 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/app/share-logo@3.png';
-                shareOPtions.title = '欢迎体验uniapp';
+                5 ? 20 : 24;break;case 11:shareOPtions.summary = this.shareText;shareOPtions.imageUrl = this.image;shareOPtions.title = this.title;shareOPtions.href = this.href;return _context.abrupt("break", 25);case 16:shareOPtions.summary = this.shareText;return _context.abrupt("break", 25);case 18:shareOPtions.imageUrl = this.image;return _context.abrupt("break", 25);case 20:
+                shareOPtions.imageUrl = this.image;
+                shareOPtions.title = this.title;
                 shareOPtions.miniProgram = {
                   id: 'gh_33446d7f7a26',
                   path: '/pages/tabBar/component/component',
@@ -285,11 +294,18 @@ var _default =
                 shareOPtions.type === 0 && plus.os.name === 'iOS')) {_context.next = 29;break;}_context.next = 28;return (
                   this.compress());case 28:shareOPtions.imageUrl = _context.sent;case 29:
 
-                if (shareOPtions.type === 1 && shareOPtions.provider === 'qq') {//如果是分享文字到qq，则必须加上href和title
-                  shareOPtions.href = 'https://uniapp.dcloud.io';
-                  shareOPtions.title = '欢迎体验uniapp';
+
+                if (shareOPtions.provider === 'sinaweibo') {//如果是分享文字到新浪微博
+                  shareOPtions.type = 1;
+                  shareOPtions.imageUrl = '';
                 }
-                uni.share(shareOPtions);case 31:case "end":return _context.stop();}}}, _callee, this);}));function share(_x) {return _share.apply(this, arguments);}return share;}(),
+
+                if (shareOPtions.provider === 'qq') {//如果是分享文字到qq，则必须加上href和title
+                  shareOPtions.type = 1;
+                  shareOPtions.href = this.href;
+                  shareOPtions.title = this.title;
+                }
+                uni.share(shareOPtions);case 32:case "end":return _context.stop();}}}, _callee, this);}));function share(_x) {return _share.apply(this, arguments);}return share;}(),
 
     compress: function compress() {//压缩图片 图文分享要求分享图片大小不能超过20Kb
       console.log('开始压缩');

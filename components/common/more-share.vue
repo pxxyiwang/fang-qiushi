@@ -23,15 +23,27 @@
 <script>
 	export default {
 		props: {
-			shareshow: Boolean
+			shareshow: Boolean,
+			sharedata: Object
 		},
 		data() {
 			return {
-				shareText: 'uni-app可以同时发布成原生App、小程序、H5，邀请你一起体验！',
-				href:"https://uniapp.dcloud.io",
+				title: '',
+				shareText: '',
+				href:"",
 				image: '',
 				shareType:1, // 1文字  2图片  0图文  5小程序  
 				providerList: []
+			}
+		},
+		watch: {
+			sharedata(newValue, oldValue) {
+				this.title = newValue.title;
+				this.shareText = newValue.content;
+				this.href = newValue.url;
+				this.image = newValue.titlepic;
+				this.shareType = newValue.shareType;
+				
 			}
 		},
 		// mounted() {
@@ -40,13 +52,10 @@
 		// 在H5端中，目前自定义组件中onLoad方法目前还不支持，暂时只能先用vue中的created或者mounted方法或者将使用哦那onReady()。onload目前只在vue文件的页面。
 		// onLoad() {
 		onReady() {
-			console.log(1111);
 			uni.getProvider({
 				service: 'share',
 				success: (e) => {
 					let data = []
-					console.log(e);
-					console.log(222);
 					for (let i = 0; i < e.provider.length; i++) {
 						switch (e.provider[i]) {
 							case 'weixin':
@@ -152,8 +161,8 @@
 					case 0:
 						shareOPtions.summary = this.shareText;
 						shareOPtions.imageUrl = this.image;
-						shareOPtions.title = '欢迎体验uniapp';
-						shareOPtions.href = 'https://uniapp.dcloud.io';
+						shareOPtions.title = this.title;
+						shareOPtions.href = this.href;
 						break;
 					case 1:
 						shareOPtions.summary = this.shareText;
@@ -162,8 +171,8 @@
 						shareOPtions.imageUrl = this.image;
 						break;
 					case 5:
-						shareOPtions.imageUrl = this.image ? this.image : 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/app/share-logo@3.png'
-						shareOPtions.title = '欢迎体验uniapp';
+						shareOPtions.imageUrl = this.image;
+						shareOPtions.title = this.title;
 						shareOPtions.miniProgram = {
 							id:'gh_33446d7f7a26',
 							path:'/pages/tabBar/component/component',
@@ -178,9 +187,16 @@
 				if(shareOPtions.type === 0 && plus.os.name === 'iOS'){//如果是图文分享，且是ios平台，则压缩图片 
 					shareOPtions.imageUrl = await this.compress();
 				}
-				if(shareOPtions.type === 1 && shareOPtions.provider === 'qq'){//如果是分享文字到qq，则必须加上href和title
-					shareOPtions.href = 'https://uniapp.dcloud.io';
-					shareOPtions.title = '欢迎体验uniapp';
+				
+				if (shareOPtions.provider === 'sinaweibo') {//如果是分享文字到新浪微博
+					shareOPtions.type = 1;
+					shareOPtions.imageUrl = '';
+				}
+				
+				if (shareOPtions.provider === 'qq') {//如果是分享文字到qq，则必须加上href和title
+					shareOPtions.type = 1;
+					shareOPtions.href = this.href;
+					shareOPtions.title = this.title;
 				}
 				uni.share(shareOPtions);
 			},

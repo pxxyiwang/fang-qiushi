@@ -126,7 +126,7 @@ var _default =
     // 话题详情
     openDetail: function openDetail() {
       uni.navigateTo({
-        url: '../../pages/topic-detail/topic-detail' });
+        url: '../../pages/topic-detail/topic-detail?detail=' + JSON.stringify(this.item) });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

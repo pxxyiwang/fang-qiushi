@@ -29,7 +29,6 @@
 	margin-left: 170rpx;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 }
 .topic-info-c.data-v-4a1c84de {

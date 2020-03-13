@@ -32,7 +32,6 @@
 }
 .home-info>image.data-v-0627f111 {
 		-webkit-flex-shrink: 0;
-		    -ms-flex-negative: 0;
 		        flex-shrink: 0;
 		width: 100rpx;
 		height: 100rpx;

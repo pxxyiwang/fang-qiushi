@@ -74,7 +74,6 @@
 }
 .common-list-left.data-v-58250ffe {
 		-webkit-flex-shrink: 0;
-		    -ms-flex-negative: 0;
 		        flex-shrink: 0;
 }
 .common-list-left image.data-v-58250ffe {
@@ -85,7 +84,6 @@
 .common-list-right.data-v-58250ffe {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
-		    -ms-flex: 1;
 		        flex: 1;
 		margin-left: 15rpx;
 		border-bottom: 1rpx solid #eee;

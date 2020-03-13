@@ -44,7 +44,6 @@
 		height: 100rpx;
 		border-radius: 100%;
 		-webkit-flex-shrink: 0;
-		    -ms-flex-negative: 0;
 		        flex-shrink: 0;
 }
 .user-chat-list-body.data-v-1e52bdaa {
@@ -74,7 +73,6 @@
 .user-chat-me.data-v-1e52bdaa {
 	 -webkit-box-pack: end;
 	 -webkit-justify-content: flex-end;
-	     -ms-flex-pack: end;
 	         justify-content: flex-end;
 }
 .user-chat-me .user-chat-list-body.data-v-1e52bdaa {

@@ -19,9 +19,18 @@
 						<!-- 上拉加载 -->
 						<load-more :loadtext="items.loadtext"></load-more>
 					</template>
+					<template v-else-if="!items.firstload">
+						<view class="u-f-ajc" style="font-size: 50rpx, font-weight: bold; color: #ccc; padding-top: 100rpx;">
+							Loading ...
+						</view>
+					</template>
 					<template v-else>
 						<!--  无内容 -->
-						<no-thing></no-thing>
+						<view class="u-f-ac u-f-ajc">
+							<!-- <no-thing></no-thing> -->
+							<text>暂无数据！</text>
+						</view>
+						
 					</template>
 				</template>
 			</block>
@@ -48,11 +57,12 @@
 		data() {
 			return {
 				topicInfo: {
-					titlepic: '../../static/demo/topicpic/13.jpeg',
-					title: '忆往事，敬余生',
-					desc:'我是描述',
-					totalnum: '1000',
-					todaynum: '200',
+					// id: '',
+					// titlepic: '../../static/demo/topicpic/13.jpeg',
+					// title: '忆往事，敬余生',
+					// desc:'我是描述',
+					// totalnum: '1000',
+					// todaynum: '200',
 				},
 				tabIndex: 0,
 				tabBars: [
@@ -61,208 +71,16 @@
 				],
 				tabList: [
 					{
-						loadtext: '上拉加载',
-						list: [
-							
-								// 图文
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-									video: false, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								// 视屏
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 0, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-									video: {
-										looknum: '20w',
-										long: '2:20'
-									}, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-									video: {
-										looknum: '50w',
-										long: '2:20'
-									}, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								// 分享
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '', // 主题 图片
-									video: false, // 主题 视屏
-									share: {
-										title: '远处只适合遥望......',
-										titlepic: '../../static/demo/datapic/1.jpg'
-									}, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 0, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '', // 主题 图片
-									video: false, // 主题 视屏
-									share: {
-										title: '远处只适合遥望......',
-										titlepic: '../../static/demo/datapic/1.jpg'
-									}, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								}
-							
-						]
+						loadtext: '上拉加载更多',
+						list: [],
+						firstload: false,
+						page: 1
 					},
 					{
-						loadtext: '上拉加载',
-						list: [
-							
-								// 图文
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-									video: false, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								// 视屏
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 0, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-									video: {
-										looknum: '20w',
-										long: '2:20'
-									}, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '../../static/demo/datapic/12.jpg', // 主题 图片
-									video: {
-										looknum: '50w',
-										long: '2:20'
-									}, // 主题 视屏
-									share: false, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								// 分享
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 1, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '', // 主题 图片
-									video: false, // 主题 视屏
-									share: {
-										title: '远处只适合遥望......',
-										titlepic: '../../static/demo/datapic/1.jpg'
-									}, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								},
-								{
-									userpic: '../../static/demo/datapic/1.jpg', // 头像
-									username: '忆忘', // 昵称
-									sex: 0, // 0 男 1 女
-									age: 25, // 年龄
-									isguanzhu: false, // 是否关注
-									title: '黑夜的烟火,绚丽而短暂', // 标题
-									titlepic: '', // 主题 图片
-									video: false, // 主题 视屏
-									share: {
-										title: '远处只适合遥望......',
-										titlepic: '../../static/demo/datapic/1.jpg'
-									}, // 主题 分享
-									path: "深圳 龙岗", // 地址
-									sharenum: 20, // 分享数量
-									commentnum: 30, // 评论数
-									goodnum: 20 // 点赞
-									
-								}
-							
-						]
+						loadtext: '上拉加载更多',
+						list: [],
+						firstload: false,
+						page: 1
 					}
 				]
 			}
@@ -276,107 +94,82 @@
 		onPullDownRefresh() {
 			this.getDownRefresh();
 		},
+		onLoad (e) {
+			this.__init(JSON.parse(e.detail));
+			// this.__init(e.detail);
+		},
 		methods: {
+			// 初始化
+			__init (obj) {
+				// 修改标题
+				uni.setNavigationBarTitle({title: obj.title});
+				// 赋值
+				this.topicInfo = obj;
+ 				// 获取列表数据
+				this.getList();
+			},
+			// 获取数据
+			async getList () {
+				let url = `/topic/${this.topicInfo.id}/post/${this.tabList[this.tabIndex].page}`;
+				let [err,res] = await this.$http.get(url,{},{token:true});
+				// 错误处理
+				if (!this.$http.errorCheck(err,res)) {
+					return this.tabList[this.tabIndex].loadtext="上拉加载更多";
+				}
+				
+				let arr = [];
+				let list = res.data.data.list;
+				for (let i = 0; i < list.length; i++) {
+					arr.push(this.__format(list[i]));
+				}
+				this.tabList[this.tabIndex].list = this.tabList[this.tabIndex].page > 1 ? this.tabList[this.tabIndex].list.concat(arr) : arr;
+				this.tabList[this.tabIndex].firstload = true;
+				return this.tabList[this.tabIndex].loadtext=(list.length < 10) ? "没有更多数据了" : "上拉加载更多";
+			},
+			// 格式转化
+			__format (item) {
+				return {
+					userid:item.user.id,
+					userpic:item.user.userpic,
+					username :item.user.username,
+					isguanzhu:!!item.user.fens.length,
+					id:item.id,
+					title:item.title,
+					type:"img", // img:图文,video:视频
+					titlepic:item.titlepic,
+					video:false,
+					path:item.path,
+					share:!!item.share,
+					infonum:{
+						index:(item.support.length>0) ? (item.support[0].type+1) : 0,//0:没有操作，1:顶,2:踩；
+						dingnum:item.ding_count,
+						cainum:item.cai_count,
+					},
+					goodnum: item.ding_count,
+					commentnum:item.comment_count,
+					sharenum:item.sharenum,
+				}
+			},
 			// tabber点击事件
 			tabtap (index) {
 				this.tabIndex = index;
+				this.tabList[this.tabIndex].page = 1;
+				this.getList();
 			},
 			// 上拉加载
 			loadmore () {
-				if (this.tabList[this.tabIndex].loadtext != "上拉加载") {return ;}
+				if (this.tabList[this.tabIndex].loadtext != "上拉加载更多") {return ;}
 				this.tabList[this.tabIndex].loadtext = "加载中。。。";
 				
-				setTimeout(() => {
-					let data = {
-						userpic: '../../static/demo/datapic/1.jpg', // 头像
-						username: '忆忘', // 昵称
-						sex: 1, // 0 男 1 女
-						age: 25, // 年龄
-						isguanzhu: false, // 是否关注
-						title: '黑夜的烟火,绚丽而短暂', // 标题
-						titlepic: '../../static/demo/datapic/14.jpg', // 主题 图片
-						video: false, // 主题 视屏
-						share: false, // 主题 分享
-						path: "深圳 龙岗", // 地址
-						sharenum: 20, // 分享数量
-						commentnum: 30, // 评论数
-						goodnum: 20 // 点赞
-						
-					}
-					this.tabList[this.tabIndex].list.push(data);
-					this.tabList[this.tabIndex].loadtext = "上拉加载";
-				}, 1000);
-				// this.tabList[this.tabIndex].loadtext = "没有更多数据了";
+				// 页数++
+				this.tabList[this.tabIndex].page++;
+				
+				// 获取数据
+				this.getList();
 			},
 			// 下拉刷新
 			getDownRefresh () {
-				
-				setTimeout(() => {
-					// 获取数据
-					let data = [
-						{
-							userpic: '../../static/demo/datapic/1.jpg', // 头像
-							username: '忆忘', // 昵称
-							sex: 1, // 0 男 1 女
-							age: 25, // 年龄
-							isguanzhu: false, // 是否关注
-							title: '黑夜的烟火,绚丽而短暂', // 标题
-							titlepic: '', // 主题 图片
-							video: false, // 主题 视屏
-							share: {
-								title: '远处只适合遥望......',
-								titlepic: '../../static/demo/datapic/1.jpg'
-							}, // 主题 分享
-							path: "深圳 龙岗", // 地址
-							sharenum: 20, // 分享数量
-							commentnum: 30, // 评论数
-							goodnum: 20 // 点赞
-							
-						},
-						{
-							userpic: '../../static/demo/datapic/1.jpg', // 头像
-							username: '忆忘', // 昵称
-							sex: 1, // 0 男 1 女
-							age: 25, // 年龄
-							isguanzhu: false, // 是否关注
-							title: '黑夜的烟火,绚丽而短暂', // 标题
-							titlepic: '', // 主题 图片
-							video: false, // 主题 视屏
-							share: {
-								title: '远处只适合遥望......',
-								titlepic: '../../static/demo/datapic/1.jpg'
-							}, // 主题 分享
-							path: "深圳 龙岗", // 地址
-							sharenum: 20, // 分享数量
-							commentnum: 30, // 评论数
-							goodnum: 20 // 点赞
-							
-						},
-						{
-							userpic: '../../static/demo/datapic/1.jpg', // 头像
-							username: '忆忘', // 昵称
-							sex: 1, // 0 男 1 女
-							age: 25, // 年龄
-							isguanzhu: false, // 是否关注
-							title: '黑夜的烟火,绚丽而短暂', // 标题
-							titlepic: '', // 主题 图片
-							video: false, // 主题 视屏
-							share: {
-								title: '远处只适合遥望......',
-								titlepic: '../../static/demo/datapic/1.jpg'
-							}, // 主题 分享
-							path: "深圳 龙岗", // 地址
-							sharenum: 20, // 分享数量
-							commentnum: 30, // 评论数
-							goodnum: 20 // 点赞
-							
-						}
-					];
-					
-					// 赋值
-					this.tabList[this.tabIndex].list = data;
-					uni.stopPullDownRefresh();
-				}, 2000)
+				// this.getList();
 			}
 		}
 	}

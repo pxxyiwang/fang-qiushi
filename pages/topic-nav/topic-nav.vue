@@ -18,6 +18,11 @@
 							<!-- 上拉加载 -->
 							<load-more :loadtext="items.loadtext"></load-more>
 						</template>
+						<template v-else-if="!items.firstload">
+							<view class="u-f-ajc" style="font-size: 50rpx, font-weight: bold; color: #ccc; padding-top: 100rpx;">
+								Loading ...
+							</view>
+						</template>
 						<template v-else>
 							<!--  无内容 -->
 							<no-thing></no-thing>
@@ -57,166 +62,7 @@
 					{name: "财经", id: "5"},
 					{name: "新闻", id: "6"}
 				],
-				newList: [
-					{
-						loadtext: '上拉加载',
-						list: [
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							}
-						]
-					},
-					{
-						loadtext: '上拉加载',
-						list: [
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							}
-							
-						]
-					},
-					{
-						loadtext: '上拉加载',
-						list: []
-					},
-					{
-						loadtext: '上拉加载',
-						list: [
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							},
-							{
-								titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-								title: '#话题名称#', // 话题名称
-								desc:'我是话题描述', // 描述
-								totalnum: 20, // 动态
-								todaynum: 5 // 今日话题量
-							}
-						]
-					},
-					{
-						loadtext: '上拉加载',
-						list: []
-					},
-					{
-						loadtext: '上拉加载',
-						list: []
-					},
-					{
-						loadtext: '上拉加载',
-						list: []
-					}
-				]
+				newList: []
 			}
 		},
 		onLoad () {
@@ -225,12 +71,68 @@
 					let height= res.windowHeight - uni.upx2px(100);
 					this.swiperHeight = height;
 				}
-			})
+			});
+			this.getNav();
 		},
 		methods: {
+			// 获取所有话题分类
+			async getNav () {
+				let [err, res] = await this.$http.get('/topicclass');
+				if (!this.$http.errorCheck(err, res)) return;
+				let list = res.data.data.list;
+				let arr = [];
+				let arrChild = [];
+				for (let i = 0; i < list.length; i++) {
+					arr.push({
+						id: list[i].id,
+						name: list[i].classname
+					});
+					arrChild.push({
+						loadtext: "上拉加载更多",
+						list: [],
+						page: 1,
+						firstload: false // 是第一次加载?
+					})
+				}
+				this.tabBars = arr;
+				this.newList = arrChild;
+				this.tabBars.length > 0 && this.getList();
+			},
+			// 获取指定列表
+			async getList () {
+				let currentIndex = this.tabIndex;
+				let url = `/topicclass/${this.tabBars[this.tabIndex].id}/topic/${this.newList[this.tabIndex].page}`;
+				let [err,res] = await this.$http.get(url);
+				let error = this.$http.errorCheck(err,res,()=>{
+					this.newList[currentIndex].loadtext="上拉加载更多";
+				},()=>{
+					this.newList[currentIndex].loadtext="上拉加载更多";
+				});
+				if (!error) return;
+				let arr = [];
+				let list = res.data.data.list;
+				for (let i = 0; i < list.length; i++) {
+					arr.push({
+						id: list[i].id,
+						title: list[i].title,
+						titlepic: list[i].titlepic,
+						type: list[i].type,
+						totalnum: list[i].post_count,
+						todaynum: list[i].todaypost_count
+					});
+				}
+				this.newList[currentIndex].list = this.newList[currentIndex].page > 1 ? this.newList[currentIndex].list.concat(arr) : arr;
+				this.newList[currentIndex].firstload = true;
+				if (list.length < 10) {
+					this.newList[currentIndex].loadtext="没有更多数据了";
+				}else{
+					this.newList[currentIndex].loadtext="上拉加载更多";
+				}
+				return;
+			},
 			// 上拉加载
 			loadmore (index) {
-				if (this.newList[index].loadtext != "上拉加载") {return ;}
+				if (this.newList[index].loadtext != "上拉加载更多") {return ;}
 				this.newList[index].loadtext = "加载中。。。";
 				
 				setTimeout(() => {
@@ -242,13 +144,14 @@
 								todaynum: 5 // 今日话题量
 							}
 					this.newList[index].list.push(data);
-					this.newList[index].loadtext = "上拉加载";
+					this.newList[index].loadtext = "上拉加载更多";
 				}, 1000);
 				// this.newList[index].loadtext = "没有更多数据了";
 			},
 			// 滑动事件
 			tabChange (e) {
 				this.tabIndex = e.detail.current;
+				this.getList();
 			},
 			// tabber点击事件
 			tabtap (index) {

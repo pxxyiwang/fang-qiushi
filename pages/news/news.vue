@@ -27,7 +27,7 @@
 					<scroll-view scroll-y class="list">
 						<!-- 搜索框 -->
 						<view class="search-input">
-							<input class="uni-input" placeholder="搜索内容" placeholder-class=" icon iconfont icon-sousuo topic-search" />
+							<input class="uni-input" placeholder="搜索话题" placeholder-class=" icon iconfont icon-sousuo topic-search" @tap="openSearch"/>
 						</view>
 						
 						<!-- 轮播图 -->
@@ -187,49 +187,9 @@
 				},
 				// 话题
 				topic: {
-					swiper: [
-						{src: '../../static/demo/banner2.jpg'},
-						{src: '../../static/demo/banner2.jpg'},
-						{src: '../../static/demo/banner2.jpg'}
-					],
-					nav: [
-						{name:'最新', id: 1},
-						{name:'游戏', id: 2},
-						{name:'打卡', id: 3},
-						{name:'感情', id: 4},
-						{name:'故事', id: 5},
-						{name:'喜爱', id: 6}
-					],
-					list: [
-						{
-							titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-							title: '#话题名称#', // 话题名称
-							desc:'我是话题描述', // 描述
-							totalnum: 20, // 动态
-							todaynum: 5 // 今日话题量
-						},
-						{
-							titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-							title: '#话题名称#', // 话题名称
-							desc:'我是话题描述', // 描述
-							totalnum: 20, // 动态
-							todaynum: 5 // 今日话题量
-						},
-						{
-							titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-							title: '#话题名称#', // 话题名称
-							desc:'我是话题描述', // 描述
-							totalnum: 20, // 动态
-							todaynum: 5 // 今日话题量
-						},
-						{
-							titlepic: '../../static/demo/topicpic/13.jpeg', // 活体图片
-							title: '#话题名称#', // 话题名称
-							desc:'我是话题描述', // 描述
-							totalnum: 20, // 动态
-							todaynum: 5 // 今日话题量
-						}
-					]
+					swiper: [],
+					nav: [],
+					list: []
 				}
 			}
 		},
@@ -239,9 +199,73 @@
 					let height= res.windowHeight - uni.upx2px(100);
 					this.swiperHeight = height;
 				}
-			})
+			});
+			
+			this.__init();
+			
 		},
 		methods: {
+			// 点击搜索
+			openSearch () {
+				uni.navigateTo({
+					url: '../search/search?searchType=topic'
+				})
+			},
+			// 初始化数据
+			__init () {
+				this.getSwiper();
+				this.getNav();
+				this.getHot();
+			},
+			// 获取广告
+			async getSwiper () {
+				let [err, res] = await this.$http.get('/adsense/0');
+				if (!this.$http.errorCheck(err, res)) return;
+				let arr = [];
+				let list = res.data.data.list;
+				for (let i = 0; i < list.length; i++) {
+					arr.push({
+						src: list[i].src,
+						url: list[i].url,
+						id: list[i].id,
+						type: list[i].type
+					});
+				}
+				this.topic.swiper = arr;
+			},
+			// 获取热门分类
+			async getNav(){
+				let [err, res] = await this.$http.get('/topicclass');
+				if (!this.$http.errorCheck(err, res)) return;
+				let arr = [];
+				let list = res.data.data.list;
+				for (let i = 0; i < list.length; i++) {
+					arr.push({
+						id: list[i].id,
+						name: list[i].classname
+					});
+				}
+				this.topic.nav = arr;
+			},
+			// 获取热门话题
+			async getHot(){
+				let [err, res] = await this.$http.get('/hottopic');
+				if (!this.$http.errorCheck(err, res)) return;
+				let arr = [];
+				let list = res.data.data.list;
+				for (let i = 0; i < list.length; i++) {
+					arr.push({
+						id: list[i].id,
+						title: list[i].title,
+						titlepic: list[i].titlepic,
+						type: list[i].type,
+						desc: list[i].desc,
+						totalnum: list[i].post_count,
+						todaynum: list[i].todaypost_count
+					});
+				}
+				this.topic.list = arr;
+			},
 			// 导航栏内容切换
 			changeTab (index) {
 				this.tabIndex = index;

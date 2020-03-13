@@ -1,8 +1,14 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
+			// console.log('App Launch')
 			// console.log(this.config.webUrl)
+			// 网络监听 （用户目前断网，切换wifi）
+			// this.lib.NetWork.On();
+			// 初始化用户状态
+			this.user.__init();
+			// 更新检测
+			
 		},
 		onShow: function() {
 			console.log('App Show')

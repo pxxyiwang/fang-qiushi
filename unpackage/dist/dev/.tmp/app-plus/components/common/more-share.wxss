@@ -288,6 +288,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 分享 */
 .more-share-model.data-v-fe59f194 {
 	background: rgba(51, 51, 51, 0.49);
@@ -317,7 +333,6 @@
 .more-share-body.data-v-fe59f194 {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	white-space: nowrap;
 	width: 100%;
@@ -329,20 +344,16 @@
 	width: 25%;
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
-	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
 	        flex-direction: column;
 	height: 100%;
 }
